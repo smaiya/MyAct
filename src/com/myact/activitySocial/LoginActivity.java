@@ -3,11 +3,13 @@ package com.myact.activitySocial;
 import java.util.Arrays;
 
 import org.json.JSONArray;
+
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.model.GraphUser;
 import com.facebook.widget.LoginButton;
+import com.myact.facebook.restclients.FacebookRestClients;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -82,6 +84,8 @@ public class LoginActivity extends Activity {
 	    if (state.isOpened()) {
 	        Log.i("DEBUG", "Logged in...");
 	        Toast.makeText(getApplicationContext(), "Login Success!", Toast.LENGTH_SHORT).show();
+	        FacebookRestClients.getCurrentUserInfo();
+	        FacebookRestClients.getFriendsList();
 	        /*
 	        Request.executeMeRequestAsync(session, new Request.GraphUserCallback() {
 

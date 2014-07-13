@@ -2,11 +2,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDF0FF"
     tools:context="${packageName}.${activityClass}" >
 
-    <TextView
+        <com.facebook.widget.LoginButton
+        android:id="@+id/authButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_below="@+id/myAct"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        />
+
+        <TextView
+            android:id="@+id/myAct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="36sp"
+            android:textColor="#0F2DD9"
+            android:textStyle="italic|bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="@string/myAct" />
 
 </RelativeLayout>
